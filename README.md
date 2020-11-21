@@ -14,7 +14,7 @@ This is a simple demo page for a startup real estate company. On the front end i
 Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
 * You have installed the latest version of Python and Django 
-* As of current Python version is 3.9
+* As of current, the version is Python 3.9
 
 ## Contributing to ENC Home Pros
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
