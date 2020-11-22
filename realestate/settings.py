@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+from django.contrib.messages import constants as messages
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'pages',
     'listings',
     'realtors',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -141,3 +142,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Media Folder Setting
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "/media/"
+
+
+# Messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
