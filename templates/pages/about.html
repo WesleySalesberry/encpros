@@ -38,15 +38,20 @@
           <p class="mt-4">Spicy jalapeno ribeye pork chop commodo flank. Doner do sunt bacon proident qui, ullamco spare ribs eu salami pig hamburger meatloaf cillum deserunt. Ball tip nostrud flank, elit ground round short ribs shank</p>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/realtors/kyle.jpg" alt="Seller of the month">
+          {% if mvp_realtor %}
+            {% for realtor in mvp_realtor  %}
+              <div class="card">
+            <img class="card-img-top" src="{{ realtor.photo.url  }}" alt="Seller of the month">
             <div class="card-body">
               <h5 class="card-title">Seller Of The Month</h5>
-              <h6 class="text-secondary">Kyle Brown</h6>
-              <p class="card-text">Jerky ut capicola pork loin, spare ribs minim alcatra landjaeger tenderloin. 
+              <h6 class="text-secondary">{{ realtor.name  }}</h6>
+              <p class="card-text">{{ realtor.description }} 
               </p>
             </div>
           </div>
+            {% endfor %}
+          {% endif %}
+          
         </div>
       </div>
     </div>
@@ -65,39 +70,25 @@
     <div class="container">
       <h2 class="text-center">Our Team</h2>
       <div class="row text-center">
-        <div class="col-md-4">
-          <img src="assets/img/realtors/kyle.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Kyle Brown</h4>
+        {% if realtor %}
+          {% for member in realtor %}
+            <div class="col-md-4">
+          <img src="{{ member.photo.url }}" alt="" class="rounded-circle mb-3">
+          <h4>{{ member.name }}</h4>
           <p class="text-success">
             <i class="fas fa-award text-success mb-3"></i> Realtor</p>
           <hr>
           <p>
-            <i class="fas fa-phone"></i> (555)-555-5555</p>
+            <i class="fas fa-phone"></i> {{ member.phone }}</p>
           <p>
-            <i class="fas fa-envelope-open"></i> kyle@encpros.com</p>
+            <i class="fas fa-envelope-open"></i> {{ member.email }}</p>
         </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/mark.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Mark Hudson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (444)-444-4444</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> mark@b@encpros.com</p>
+          {% endfor %}
+        {% else %}
+        <div class="col-md-12">
+          <p>No Realtors Available</p>
         </div>
-
-        <div class="col-md-4">
-          <img src="assets/img/realtors/jenny.jpg" alt="" class="rounded-circle mb-3">
-          <h4>Jenny Johnson</h4>
-          <p class="text-success">Realtor</p>
-          <hr>
-          <p>
-            <i class="fas fa-phone"></i> (333)-333-3333</p>
-          <p>
-            <i class="fas fa-envelope-open"></i> jenny@encpros.com</p>
-        </div>
+        {% endif %}
       </div>
     </div>
   </section>
