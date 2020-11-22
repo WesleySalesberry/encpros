@@ -31,4 +31,4 @@ class ListingPhoto(models.Model):
     photo = models.ImageField(upload_to='photos/main/inside')
 
     def __str__(self):
-        return self.title
+        return self.listing.title
