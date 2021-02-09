@@ -10,6 +10,8 @@ This is a simple demo page for a startup real estate company. On the front end i
 
 ## Demo
 [ENC Home Pros](https://enchomepros-demo.herokuapp.com/)
+username: demo
+password: usertest1234
 
 
 ## Prerequisites
