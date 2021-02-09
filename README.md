@@ -9,7 +9,7 @@
 This is a simple demo page for a startup real estate company. On the front end it has several features. It displays the listings of all properties, and allows the user to see the individual property. It will also display the chosen realtors and a special realtor. In the admin panel, it allows the realtor to upload photos of their properties and when a user selects the property, it will send a message to the realtor that is linked to the property. 
 
 ## Demo
-[ENC Home Pros](https://enchomepros-demo.herokuapp.com/)
+![ENC Home Pros](https://enchomepros-demo.herokuapp.com/)
 username: demo
 password: usertest1234
 
@@ -60,7 +60,7 @@ python manage.py runserver
 
 Thanks to the following people who have contributed to this project:
 
-* [@wesleySalesberry](https://github.com/swesleySalesberry) 📖
+* ![@wesleySalesberry](https://github.com/swesleySalesberry) 📖
 
 
 ## Contact
@@ -68,4 +68,4 @@ Thanks to the following people who have contributed to this project:
 If you want to contact me you can reach me at wesleySalesberry@hotmail.com.
 
 
-This project uses the following license: [MIT](<link>).
+This project uses the following license: ![MIT](<link>).
