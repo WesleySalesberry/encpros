@@ -14,11 +14,10 @@ def index(request):
     context = {
         'listings': paged_listing,
     }
-    return render(request, 'listings/listings.html', context)
+    return render(request, 'listings/allListings.html', context)
 
 
 def listing(request, listing_id):
-
     listing = get_object_or_404(Listing, pk=listing_id)
     photos = ListingPhoto.objects.filter(listing=listing)
     print(len(photos))
