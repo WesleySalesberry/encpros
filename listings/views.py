@@ -14,7 +14,7 @@ def index(request):
     context = {
         'listings': paged_listing,
     }
-    return render(request, 'listings/allListings.html', context)
+    return render(request, 'houses/listings.html', context)
 
 
 def listing(request, listing_id):
@@ -25,7 +25,7 @@ def listing(request, listing_id):
         'listing': listing,
         'photos': photos
     }
-    return render(request, 'listings/listing.html', context)
+    return render(request, 'houses/listing.html', context)
 
 
 def search(request):
@@ -72,4 +72,4 @@ def search(request):
         'values': request.GET
     }
 
-    return render(request, 'listings/search.html', context)
+    return render(request, 'houses/search.html', context)
